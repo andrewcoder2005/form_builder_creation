@@ -1,0 +1,1 @@
+Formio.buidler(document.getElementById('form-builder'));

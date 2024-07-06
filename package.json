@@ -1,0 +1,27 @@
+{
+  "name": "form-builder",
+  "version": "1.0.0",
+  "description": "create a form builder ",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andrew Pham",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewcoder2005/form_builder_creation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andrewcoder2005/form_builder_creation/issues"
+  },
+  "homepage": "https://github.com/andrewcoder2005/form_builder_creation#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
