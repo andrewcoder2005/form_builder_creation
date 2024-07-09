@@ -8,6 +8,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html')); // Serve index.html for the root route
 });
 
+
 app.listen(PORT,() => {
     console.log(`Server is running on http://localhost:${PORT}/ `);
 })

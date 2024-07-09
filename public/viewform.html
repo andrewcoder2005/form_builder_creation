@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+<script src="https://cdn.form.io/js/formio.embed.js"></script>
+</head>
+<body>
+    <div id="formio"></div>
+</body>
+<script>  Formio.createForm(document.getElementById('formio'), {
+    "components": [
+    {
+            "collapsible": false,
+            "key": "panel",
+            "type": "panel",
+            "label": "Panel",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "Text Area",
+                    "applyMaskOn": "change",
+                    "autoExpand": false,
+                    "tableView": true,
+                    "key": "textArea",
+                    "type": "textarea",
+                    "input": true
+                },
+                {
+                    "label": "Text Field",
+                    "applyMaskOn": "change",
+                    "tableView": true,
+                    "key": "textField",
+                    "type": "textfield",
+                    "input": true
+                },
+                {
+                    "label": "Signature",
+                    "tableView": false,
+                    "key": "signature",
+                    "type": "signature",
+                    "input": true
+                },
+                {
+                    "input": true,
+                    "key": "checkbox",
+                    "tableView": false,
+                    "label": "Checkbox",
+                    "type": "checkbox"
+                }
+            ]
+        },
+        {
+            "type": "button",
+            "label": "Submit",
+            "key": "submit",
+            "disableOnInvalid": true,
+            "input": true,
+            "tableView": false
+        }
+    ]
+}).then(function(form) {
+form.on('submit', function(submission) 
+{
+    var temp =  JSON.stringify(submission.data);
+    console.log(temp);
+});
+});
+</script>
+</html>
